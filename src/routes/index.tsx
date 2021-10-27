@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { Background } from '../components/Background';
-import { theme } from '../global/styles/theme/theme';
+//import { theme } from '../global/styles/theme/theme';
 
 
 
