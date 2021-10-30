@@ -15,6 +15,7 @@ import { ListDivider } from '../../components/ListDivider';
 export function Home() {
   const [category, setCategory] = useState('');
   //const [loading, setLoading] = useState(true);
+  const navigation = useNavigation();
   const appointment = [
     {
       id: '1',
@@ -48,13 +49,20 @@ export function Home() {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
+  function handleAppointmentDetails() {
+    navigation.navigate('AppointmentDetails');
+  }
+  function handleAppointmentCreate() {
+    navigation.navigate('AppointmentCreate');
+  }
+
   return (
     <Background>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
-      
+
       <CategorySelect
         categorySelected={category}
         setCategory={handleCategorySelect}
@@ -70,7 +78,10 @@ export function Home() {
           data={appointment}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
-            <Appointment data={item} />
+            <Appointment
+              data={item}
+              onPress={handleAppointmentDetails}
+            />
           )}
           ItemSeparatorComponent={() => <ListDivider />}
           style={styles.matches}
