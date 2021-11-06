@@ -40,7 +40,115 @@ export function Home() {
       category: '1',
       date: '22/06 ás 20:40h',
       description: 'É hoje que vamos vencer'
-    }
+    },
+    {
+      id: '3',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '4',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '5',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '6',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '7',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '8',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '9',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '10',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
+    {
+      id: '11',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: false,
+      },
+      category: '1',
+      date: '22/06 ás 20:40h',
+      description: 'É hoje que vamos vencer'
+    },
 
   ]
 
@@ -73,21 +181,21 @@ export function Home() {
           title="Partidas Agendadas"
           subtitle="Total: 6"
         />
-
-        <FlatList
-          data={appointment}
-          keyExtractor={item => item.id}
-          renderItem={({ item }) => (
-            <Appointment
-              data={item}
-              onPress={handleAppointmentDetails}
-            />
-          )}
-          ItemSeparatorComponent={() => <ListDivider />}
-          style={styles.matches}
-          showsVerticalScrollIndicator={false}
-        />
       </View>
+      <FlatList
+        data={appointment}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => (
+          <Appointment
+            data={item}
+            onPress={handleAppointmentDetails}
+          />
+        )}
+        ItemSeparatorComponent={() => <ListDivider />}
+        contentContainerStyle={{ paddingBottom: 69 }}
+        style={styles.matches}
+        showsVerticalScrollIndicator={false}
+      />
     </Background>
   );
 }

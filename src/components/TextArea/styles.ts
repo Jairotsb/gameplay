@@ -8,9 +8,13 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.secondary40, 
     color: theme.colors.heading, 
     fontFamily: theme.fonts.text400, 
-    fontSize: 18, 
+    fontSize: 15, 
     marginRight: 4, 
-    textAlign: 'center',
     borderRadius: 4, 
+    borderWidth: 1, 
+    borderColor: theme.colors.secondary50,
+    paddingHorizontal: 16, 
+    paddingTop: 16,
+    textAlignVertical: 'top'
   }
 });

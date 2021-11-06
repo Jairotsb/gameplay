@@ -26,8 +26,38 @@ export function Guilds({ handleGuildSelected }: Props) {
       name: 'Vitoriosos',
       icon: null,
       owner: true
-    }
+    },
+    {
+      id: '3',
+      name: 'Vitoriosos',
+      icon: null,
+      owner: true
+    },
+    {
+      id: '4',
+      name: 'Vitoriosos',
+      icon: null,
+      owner: true
+    },
+    {
+      id: '5',
+      name: 'Vitoriosos',
+      icon: null,
+      owner: true
+    },
+    {
+      id: '6',
+      name: 'Vitoriosos',
+      icon: null,
+      owner: true
+    },
 
+    {
+      id: '7',
+      name: 'Vitoriosos',
+      icon: null,
+      owner: true
+    },
   ]
 
   return (
@@ -35,6 +65,9 @@ export function Guilds({ handleGuildSelected }: Props) {
       <FlatList
         data={guilds}
         keyExtractor={item => item.id}
+        contentContainerStyle={{paddingBottom: 69, paddingTop: 64}}
+        ListHeaderComponent={() => <ListDivider isCentered/>}
+        ItemSeparatorComponent={() => <ListDivider isCentered/>}
         renderItem={({ item }) => (
           <Guild
             data={item}
@@ -42,7 +75,6 @@ export function Guilds({ handleGuildSelected }: Props) {
           />
         )}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <ListDivider />}
         style={styles.guilds}
       />
 
