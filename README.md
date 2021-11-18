@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="GamePlay" height="80" title="Plant Manager" src=".github/logo.png" />
+  <img alt="GamePlay" height="80" title="Gameplay" src=".github/logo.png" />
 </h1>
 
 <p align="center">
@@ -12,24 +12,24 @@
 ![cover](.github/cover.png?style=flat)
 
 
-## 💻 Projeto
-Aplicativo para lhe ajudar a conectar-se e organiza o momento de diversão e jogar com os amigos. Crie grupos para jogar seus games favoritos com seus amigos com esse App que possui autenticação com Discord.
+## 💻 Project
+An app to help you connect and organize a fun time and play with friends. Make groups to play your favorite games with your friends in this app that has discord authentication.
 
 
 ## :hammer_and_wrench: Features 
 
--   [ ] Autenticação Social OAuth2 com servidor do Discord.
--   [ ] Obtém perfil do usuário cadastro no Discord (username e avatar);
--   [ ] Lista os servidores do Discord que o usuário faz parte;
--   [ ] Permite realizar o agendamento de partidas;
--   [ ] Permite filtrar as partidas por categoria;
--   [ ] Exibe se a partida foi agendada em um servidor próprio (anfitrião) ou em servidores de outros (convidado);
--   [ ] Compartilha o convite para ingressar no servidor do usuário;
--   [ ] Permite redirecionar o usuário para o seu próprio servidor;
--   [ ] Disponibiliza a função de Logout.
+-  :heavy_check_mark: Autenticação Social OAuth2 com servidor do Discord. 
+-  :heavy_check_mark: Obtém perfil do usuário cadastro no Discord (username e avatar); 
+-  :heavy_check_mark: Lista os servidores do Discord que o usuário faz parte; 
+-  :heavy_check_mark: Permite realizar o agendamento de partidas; 
+-  :heavy_check_mark: Permite filtrar as partidas por categoria; 
+-  :heavy_check_mark: Exibe se a partida foi agendada em um servidor próprio (anfitrião) ou em servidores de outros (convidado)    
+-  :heavy_check_mark: Compartilha o convite para ingressar no servidor do usuário; 
+-  :heavy_check_mark: Permite redirecionar o usuário para o seu próprio servidor; 
+-  :heavy_check_mark: Disponibiliza a função de Logout. 
 
 
-## ✨ Tecnologias
+## ✨ Technologies
 
 -   React Native :heavy_check_mark:
 -   Typescript :heavy_check_mark:
@@ -50,20 +50,18 @@ Aplicativo para lhe ajudar a conectar-se e organiza o momento de diversão e jog
 
 
 ## 🔖 Layout
+You can view the project layout within [this link] (https://www.figma.com/file/0kv33XYjvOgvKGKHBaiR07/GamePlay-NLW-Together?node-id=58913%3A83). It is necessary to have a figma account [Figma] (http://figma.com/) to access.
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/0kv33XYjvOgvKGKHBaiR07/GamePlay-NLW-Together?node-id=58913%3A83). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
 
+## Executing the project
 
-## Executando o projeto
-
-Utilize o **yarn** ou o **npm install** para instalar as dependências do projeto.
-Em seguida, inicie o projeto.
+Use **yarn** or **npm install** to install project dependencies
 
 ```cl
 expo start
 ```
 
-Lembre-se de criar o seu App no servidor do Discord para obter as credencias de autenticação. Em seguida, defina no arquivo .env as configurações do seu App (remova o example do arquivo .env.example).
+Remember to create your application on the discord server to get the authentication credential. Next, define your application's configuration in the .env file (remove the example from .env.example).
  
  ```cl
 REDIRECT_URI=
@@ -75,14 +73,13 @@ CDN_IMAGE=
 
 
 ## 📄 Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+This project is under license from MIT. See [LICENSE](LICENSE.md) for more details.
 
 <br />
 
 <div align="center">
-  <small>Desenvolvido por Rodrigo Gonçalves Santana - Junho/2021</small>
+  <small>Development with :purple_heart: by Jairo Tunisse - November/2021</small>
 
-  [![Instagram Badge](https://img.shields.io/badge/-rodrigo.goncalves.s-6633cc?style=flat-square&labelColor=6633cc&logo=instagram&logoColor=white&link=https://www.instagram.com/rodrigo.goncalves.s/)](https://www.instagram.com/rodrigo.goncalves.s/) 
-  [![Linkedin Badge](https://img.shields.io/badge/-Rodrigo%20Gonçalves%20Santana-6633cc?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rodrigo-gon%C3%A7alves-santana/)](https://www.linkedin.com/in/rodrigo-gon%C3%A7alves-santana/) 
+  [![Instagram Badge](https://img.shields.io/badge/-rodrigo.goncalves.s-6633cc?style=flat-square&labelColor=6633cc&logo=instagram&logoColor=white&link=https://www.instagram.com/rodrigo.goncalves.s/)](https://www.instagram.com/jairotunisse) 
+  [![Linkedin Badge](https://img.shields.io/badge/-Rodrigo%20Gonçalves%20Santana-6633cc?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rodrigo-gon%C3%A7alves-santana/)](https://www.linkedin.com/in/jairotsb/) 
 </div>
