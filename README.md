@@ -18,15 +18,15 @@ An app to help you connect and organize a fun time and play with friends. Make g
 
 ## :hammer_and_wrench: Features 
 
--  :heavy_check_mark: Autenticação Social OAuth2 com servidor do Discord. 
--  :heavy_check_mark: Obtém perfil do usuário cadastro no Discord (username e avatar); 
--  :heavy_check_mark: Lista os servidores do Discord que o usuário faz parte; 
--  :heavy_check_mark: Permite realizar o agendamento de partidas; 
--  :heavy_check_mark: Permite filtrar as partidas por categoria; 
--  :heavy_check_mark: Exibe se a partida foi agendada em um servidor próprio (anfitrião) ou em servidores de outros (convidado)    
--  :heavy_check_mark: Compartilha o convite para ingressar no servidor do usuário; 
--  :heavy_check_mark: Permite redirecionar o usuário para o seu próprio servidor; 
--  :heavy_check_mark: Disponibiliza a função de Logout. 
+-  Autenticação Social OAuth2 com servidor do Discord. :heavy_check_mark:
+-  Obtém perfil do usuário cadastro no Discord (username e avatar); :heavy_check_mark:
+-  Lista os servidores do Discord que o usuário faz parte; :heavy_check_mark: 
+-  Permite realizar o agendamento de partidas; :heavy_check_mark: 
+-  Permite filtrar as partidas por categoria; :heavy_check_mark: 
+-  Exibe se a partida foi agendada em um servidor próprio (anfitrião) ou em servidores de outros (convidado) :heavy_check_mark:    
+-  Compartilha o convite para ingressar no servidor do usuário; :heavy_check_mark: 
+-  Permite redirecionar o usuário para o seu próprio servidor; :heavy_check_mark: 
+-  Disponibiliza a função de Logout. :heavy_check_mark: 
 
 
 ## ✨ Technologies
