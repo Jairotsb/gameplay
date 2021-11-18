@@ -50,7 +50,7 @@ An app to help you connect and organize a fun time and play with friends. Make g
 
 
 ## 🔖 Layout
-You can view the project layout within [this link] (https://www.figma.com/file/0kv33XYjvOgvKGKHBaiR07/GamePlay-NLW-Together?node-id=58913%3A83). It is necessary to have a figma account [Figma] (http://figma.com/) to access.
+You can view the project layout within [this link](https://www.figma.com/file/0kv33XYjvOgvKGKHBaiR07/GamePlay-NLW-Together?node-id=58913%3A83). It is necessary to have a figma account [Figma](http://figma.com/) to access.
 
 
 ## Executing the project
