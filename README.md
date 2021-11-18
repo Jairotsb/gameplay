@@ -80,8 +80,7 @@ This project is under license from MIT. See [LICENSE](LICENSE.md) for more detai
 <div align="center"> 
   <small>Development with :purple_heart: by Jairo Tunisse - November/2021</small>
   
-  [![Instagram Badge](https://img.shields.io/badge/-jairotunisse-6633cc?style=flat-   square&labelColor=6633cc&logo=instagram&logoColor=white&link=https://www.instagram.com/jairotunisse/)](https://www.instagram.com/jairotunisse)
-  
+  [![Instagram Badge](https://img.shields.io/badge/-jairotunisse-6633cc?style=flat-square&labelColor=6633cc&logo=instagram&logoColor=white&link=https://www.instagram.com/jairotunisse/)](https://www.instagram.com/jairotunisse)
   [![Linkedin Badge](https://img.shields.io/badge/-jairotsb-6633cc?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jairotsb)](https://www.linkedin.com/in/jairotsb/)
   
 </div>
