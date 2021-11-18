@@ -8,6 +8,8 @@ import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
 import { AuthProvider } from './src/hooks/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { COLLECTION_APPOINTMENTS, COLLECTION_USERS } from './src/configs/database';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,6 +31,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
+
       <AuthProvider>
         <Routes />
       </AuthProvider>

@@ -9,161 +9,48 @@ import { Profile } from '../../components/Profile';
 
 import { styles } from './styles';
 import { ListHeader } from '../../components/ListHeader';
-import { Appointment } from '../../components/Appointment';
+import { Appointment, AppointmentProps } from '../../components/Appointment';
 import { ListDivider } from '../../components/ListDivider';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { COLLECTION_APPOINTMENTS } from '../../configs/database';
+import { Load } from '../../components/Load';
 
 export function Home() {
   const [category, setCategory] = useState('');
-  //const [loading, setLoading] = useState(true);
+  const [appointment, setAppointment] = useState<AppointmentProps[]>([]);
+  const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
-  const appointment = [
-    {
-      id: '1',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '2',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '3',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '4',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '5',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '6',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '7',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '8',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '9',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '10',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-    {
-      id: '11',
-      guild: {
-        id: '1',
-        name: 'Lendários',
-        icon: null,
-        owner: false,
-      },
-      category: '1',
-      date: '22/06 ás 20:40h',
-      description: 'É hoje que vamos vencer'
-    },
-
-  ]
 
 
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
-  function handleAppointmentDetails() {
-    navigation.navigate('AppointmentDetails');
+  function handleAppointmentDetails(guildSelected: AppointmentProps) {
+    navigation.navigate('AppointmentDetails', {guildSelected});
   }
   function handleAppointmentCreate() {
     navigation.navigate('AppointmentCreate');
   }
 
+  async function loadAppointments() {
+    const res = await AsyncStorage.getItem(COLLECTION_APPOINTMENTS);
+    const storage: AppointmentProps[] = res ? JSON.parse(res) : [];
+
+    if (category) {
+      setAppointment(storage.filter(item => item.category === category));
+    } else {
+      setAppointment(storage);
+    }
+
+    setLoading(false);
+  }
+
+  useFocusEffect(useCallback(() => {
+    loadAppointments();
+  },[category]));
+
+  
   return (
     <Background>
       <View style={styles.header}>
@@ -176,26 +63,30 @@ export function Home() {
         setCategory={handleCategorySelect}
       />
 
-      <View style={styles.content}>
-        <ListHeader
-          title="Partidas Agendadas"
-          subtitle="Total: 6"
-        />
-      </View>
-      <FlatList
-        data={appointment}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => (
-          <Appointment
-            data={item}
-            onPress={handleAppointmentDetails}
+      {loading ? <Load/> :
+        <>
+          <ListHeader
+            title="Partidas Agendadas"
+            subtitle={`Total: ${appointment.length}`}
           />
-        )}
-        ItemSeparatorComponent={() => <ListDivider />}
-        contentContainerStyle={{ paddingBottom: 69 }}
-        style={styles.matches}
-        showsVerticalScrollIndicator={false}
-      />
+
+          <FlatList
+            data={appointment}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => (
+              <Appointment
+                data={item}
+                onPress={() => handleAppointmentDetails(item)}
+              />
+            )}
+            ItemSeparatorComponent={() => <ListDivider />}
+            contentContainerStyle={{ paddingBottom: 69 }}
+            style={styles.matches}
+            showsVerticalScrollIndicator={false}
+          />
+
+        </>
+      }
     </Background>
   );
 }

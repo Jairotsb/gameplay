@@ -9,12 +9,13 @@ import { styles } from './styles';
 
 type ButtonProps = RectButtonProps & {
   title: string;
+  negativeButton: boolean
 }
 
-export function Button({ title, ...rest }: ButtonProps) {
+export function Button({ negativeButton, title, ...rest }: ButtonProps) {
   return (
     <RectButton
-      style={styles.container}
+      style={negativeButton ? styles.negativeButton : styles.container }
       {...rest}
     >
       <Text style={styles.title}>
